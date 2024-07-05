@@ -1,0 +1,403 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background:  #FFE0B8 ;
+
+/* Style the header links */
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(to right, #9C92A1, #39363B); /* เพิ่มกราเดียนต์เชิงเส้นให้กับพื้นหลัง */
+    border-radius: 15px; /* เพิ่มขอบโค้งให้กับส่วนหัว */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเบาๆ ให้กับส่วนหัว */
+            overflow: hidden; /* ป้องกันเนื้อหาภายในไม่ให้หลุดออกนอกขอบโค้ง */
+
+}
+
+.nav-links {
+    display: flex;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้กับตัวหนังสือ */
+    font-size: 22px; /* เพิ่มขนาดตัวอักษร */
+}
+.nav-links a.bold {
+    font-weight: bold; /* ทำให้ข้อความในลิงก์ตัวหนา */
+
+}
+.nav-links a.bold::before {
+    content: "\f1cb"; /* ไอคอนจาก Ionicons */
+    font-family: "Ionicons";
+    font-size: 24px; /* ขนาดของไอคอน */
+    color: rgb(226, 50, 50); /* สีของไอคอน */
+    background-color: #ff5722; /* สีพื้นหลังของวงกลม */
+    width: 40px; /* ความกว้างของวงกลม */
+    height: 40px; /* ความสูงของวงกลม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -50px; /* ระยะห่างจากซ้าย */
+    top: 50%; /* ตั้งตำแหน่งด้านบนที่ 50% */
+    transform: translateY(-50%); /* เลื่อนขึ้นครึ่งหนึ่งของความสูงเพื่อให้ไอคอนอยู่กึ่งกลาง */
+}
+.nav-links a.bold .sub-text {
+    display: block; /* จัดการให้ข้อความย่อยแสดงเป็นบรรทัดใหม่ */
+    font-size: 14px; /* ขนาดตัวอักษรของข้อความย่อย */
+    color: #ffffff; /* สีของข้อความย่อย */
+    margin-top: 5px; /* ระยะห่างจากข้อความหลัก */
+}
+
+}
+.square-button {
+    background-color: #FFAF4B; /* สีพื้นหลังของปุ่ม */
+    color: white; /* สีของข้อความในปุ่ม */
+    border: none; /* ไม่มีกรอบ */
+    padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    cursor: pointer; /* แสดงเป็นเคอร์เซอร์แบบคลิกได้ */
+    border-radius: 4px; /* มุมโค้ง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาปุ่ม */
+}
+/* สไตล์สำหรับรูปภาพด้านล่าง header */
+.below-header {
+    text-align: center; /* จัดตำแหน่งให้ตรงกลาง */
+    padding: 1px 0; /* เพิ่มระยะห่างด้านบนและด้านล่าง */
+    background: #FFE0B8; /* สีพื้นหลังถ้าต้องการ */
+}
+
+.below-header-image {
+    max-width: 100%; /* ปรับขนาดรูปภาพไม่ให้เกินขนาดของพื้นที่ที่กำหนด */
+    height: auto; /* คงสัดส่วนของรูปภาพ */
+    display: block; /* ทำให้รูปภาพเป็นบล็อก */
+    margin: 0 auto; /* จัดกลางในแนวนอน */
+    .square-block p {
+        margin: 0; /* ลบระยะห่างภายนอกของพารากราฟ */
+        font-size: 18px; /* ขนาดฟอนต์ */
+        color: #333; /* สีของข้อความ */
+    }
+
+}
+/* สไตล์สำหรับการ์ด */
+.card {
+    background-color: white; /* สีพื้นหลังของการ์ด */
+    padding: 1px; /* ระยะห่างภายในการ์ด */
+    margin: 5px auto; /* ระยะห่างด้านบนและด้านล่าง และจัดกลางในแนวนอน */
+    width: 80%; /* ความกว้างของการ์ด */
+    max-width: 1050px; /* ความกว้างสูงสุดของการ์ด */
+    border-radius: 8px; /* มุมโค้งของการ์ด */
+    box-shadow: 0 4px 3px rgba(64, 109, 130, 0.7); /* เงาการ์ด */
+    text-align: left; /* จัดตำแหน่งข้อความให้ตรงกลาง */
+}
+
+.card h2 {
+   
+    font-size: 24px; /* ขนาดฟอนต์ของหัวข้อ */
+    color: #333; /* สีของหัวข้อ */
+    padding-left: 20px; /* เพิ่มระยะห่างด้านซ้าย */
+}
+.card p {
+    margin: 10px 20px 0; /* ระยะห่างด้านบนและด้านล่างของข้อความ */
+    font-size: 16px; /* ขนาดฟอนต์ของข้อความ */
+    color: #406D82; /* สีของข้อความ */
+    text-shadow: 0 0px 0px rgba(64, 109, 130, 0.7); /* เงาการ์ด */
+}
+
+/* สไตล์สำหรับ container ของการ์ด */
+.card-container {
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดการ์ดให้อยู่ตรงกลางแนวตั้ง */
+    padding: 2px; /* ระยะห่างภายในการ์ด */
+    flex-wrap: wrap; /* อนุญาตให้การ์ดย้ายไปยังแถวถัดไปหากพื้นที่ไม่พอ */
+    margin: 5px; /* ระยะห่างด้านนอกของ container */
+    
+}
+
+/* สไตล์การ์ดที่มีการเน้นแตกต่าง */
+.card-left {
+    max-width: 510px; /* กำหนดความกว้างสูงสุดของการ์ด */
+    min-height: 150px; /* ความสูงขั้นต่ำของการ์ด (ปรับค่าได้ตามต้องการ) */
+ 
+}
+.card-right {
+    max-width: 510px; /* กำหนดความกว้างสูงสุดของการ์ด */
+    min-height: 150px; /* ความสูงขั้นต่ำของการ์ด (ปรับค่าได้ตามต้องการ) */
+}
+
+/* การ์ดซ้ายและขวา */
+.card-left {
+    margin-left:205px;
+    background-color: #ffffff; /* สีพื้นหลังที่แตกต่างสำหรับการ์ดซ้าย */
+}
+
+.card-right {
+    margin-right:205px; /* ระยะห่างด้านขวาของการ์ดซ้าย (ปรับค่าได้ตามต้องการ) */
+    background-color: #ffffff; /* สีพื้นหลังที่แตกต่างสำหรับการ์ดขวา */
+}
+.centered-text {
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลาง */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ความหนาของตัวอักษร */
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+button {
+    position: relative;
+    padding: 13px 50px;
+    background: #95dd03;
+    font-size: 17px;
+    font-weight: 700;
+    color: #005713;
+    border: 5;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #18181869, inset 2px 2px 10px #ffffffb0;
+    transition: all .3s ease-in-out;
+    margin-left: 35px; /* ปรับระยะการขยับของปุ่ม */
+  }
+  
+  .icon-1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .icon-2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  .icon-3 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  .icon-4 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  .icon-5 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    z-index: -2;
+  }
+  
+  button:hover {
+    padding: 13px 25px;
+    border-radius: 8px 8px 24px 24px;
+  }
+  
+  button:hover .icon-1 {
+    top: -250%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+    height: auto;
+    animation: inIcon1 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon1 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    25% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(5deg);
+    }
+  
+    50% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(1deg);
+    }
+  
+    65% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(3deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-2 {
+    position: absolute;
+    top: -200%;
+    left: 90%;
+    transform: translate(-50%, 0);
+    width: 75px;
+    height: auto;
+    animation: inIcon2 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon2 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    35% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(10deg);
+    }
+  
+    50% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(4deg);
+    }
+  
+    80% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(5deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-3 {
+    position: absolute;
+    top: -130%;
+    left: 20%;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: auto;
+    animation: inIcon3 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon3 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    35% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(-2deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-4 {
+    position: absolute;
+    top: -300%;
+    left: 10%;
+    transform: translate(-50%, 0);
+    width: 85px;
+    height: auto;
+    animation: inIcon4 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon4 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    40% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(-3deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  button:hover .icon-5 {
+    position: absolute;
+    top: -350%;
+    left: 90%;
+    transform: translate(-50%, 0);
+    width: 85px;
+    height: auto;
+    animation: inIcon5 1s ease .45s forwards;
+  }
+  
+  @keyframes inIcon5 {
+    0% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  
+    35% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(-3deg);
+    }
+  
+    100% {
+      transform-origin: 0 100%;
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+  
+  .fil-leaf-1 {
+    fill: #7B9B3A
+  }
+  
+  .fil-leaf-2 {
+    fill: #556729;
+    fill-rule: nonzero
+  }
+  
+  .fil-leaf-3 {
+    fill: #556729
+  }
+  
+  .fil-leaf-4 {
+    fill: #3C4819
+  }
+  
+  .fil-leaf-5 {
+    fill: #3C4819
+  }
+  
+  
